@@ -1,0 +1,5 @@
+
+.twitter.json
+*.pyc
+*.log
+run.bat
