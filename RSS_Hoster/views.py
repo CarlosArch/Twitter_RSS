@@ -19,5 +19,4 @@ def feed(request):
 
     RSS = format_to_rss(timeline, screen_name)
     return HttpResponse(RSS, content_type='text/xml')
-    # return render(request, 'templates/feed.html', {'screen_name':screen_name, 'RSS':RSS})
 

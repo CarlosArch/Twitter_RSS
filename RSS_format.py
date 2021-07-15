@@ -15,22 +15,21 @@ text_only_item_format = '''<item>
     <link>{tweet_link}</link>
 </item>'''
 
-# media_item_format = '''<item>
-#     <title>{tweet_text}</title>
-#     <link>{tweet_link}</link>
-# </item>'''
-
 media_item_format = '''<item>
     <title>{tweet_text}</title>
     <link>{tweet_link}</link>
-    <enclosure url="{image_url}" length="200000" type="image/jpeg" />
+    <![CDATA[<img src="{image_url}"/>]]> 
 </item>'''
 
 # media_item_format = '''<item>
 #     <title>{tweet_text}</title>
 #     <link>{tweet_link}</link>
-#     <![CDATA[
-#         <img src="{image_url}"/>
-#     ]]> 
 # </item>'''
+
+# media_item_format = '''<item>
+#     <title>{tweet_text}</title>
+#     <link>{tweet_link}</link>
+#     <enclosure url="{image_url}" length="200000" type="image/jpeg" />
+# </item>'''
+
 
