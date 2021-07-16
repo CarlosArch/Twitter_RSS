@@ -63,5 +63,5 @@ if __name__ == '__main__':
 
             RSS = format_to_rss(timeline, screen_name)
 
-            with open(f'RSS_Output_{screen_name}.txt', 'w+', encoding='utf8') as output:
+            with open(f'RSS_Output_{screen_name}.xml', 'w+', encoding='utf8') as output:
                 output.write(RSS)
