@@ -12,6 +12,10 @@ def feed(request):
     media_only = request.GET.get('media_only')
     limit = request.GET.get('limit')
 
+    no_replies = True if no_replies == 'yes' else False
+    media_only = True if no_replies == 'yes' else False
+    limit = int(limit) if limit else 250
+
     _, api = connect_to_twitter('.twitter.json')
     timeline = get_user_timeline(api=api
                                 ,screen_name=screen_name

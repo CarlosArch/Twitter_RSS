@@ -16,6 +16,7 @@ def connect_to_twitter(key_file_name):
     return auth, api
 
 def get_user_timeline(api, screen_name, no_replies=True, media_only=True, limit=500):
+
     timeline = list(tweepy.Cursor(api.user_timeline, screen_name=screen_name).items(limit))
 
     if no_replies:
